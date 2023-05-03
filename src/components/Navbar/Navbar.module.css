@@ -1,0 +1,20 @@
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 48px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+.navlist li a {
+  color: #343030;
+}
+
+@media (max-width: 1000px) {
+  .navlist {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Navbar.module.css.map */

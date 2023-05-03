@@ -1,0 +1,137 @@
+$rush: #35274A;
+$more: #403432;
+@mixin transform($transform...) {
+  transform: $transform;
+}
+
+@mixin transition($transition...) {
+  transition: $transition;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin border-radius($radius...) {
+  border-radius: $radius;
+}
+
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin flex($values) {
+  @include flexbox;
+  flex: $values;
+}
+
+body {
+  background-color: $rush;
+  color: $more;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display SC', serif;
+}
+.text {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0 0 2em;
+  font-size: 24px;
+  text-align: center;
+}
+.container {
+  display: none !important;
+  width: 100%;
+  margin: 0 auto;
+  @include flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .item {
+    max-width: 350px;
+    @include flex(1 0 1);
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em 3em;
+  }
+}
+@media (max-width:1000px ) {
+  .container{
+    display: flex !important;
+  }
+
+}
+// Nav icons
+.icon {
+  padding: 0;
+  margin: 1em;
+  width: 34px;
+}
+
+.close {
+  &:before,
+  &:after {
+    @include border-radius(3px);
+    height: 4px;
+    margin: 7px 0;
+    @include transition(all .3s ease-in-out);
+    background-color: $more;
+    @include pseudo;
+    position: relative;
+  }
+  &:before {
+    box-shadow: 0 11px 0 $more;
+    margin-bottom: 18px;
+  }
+  &:hover:before {
+    box-shadow: 0 0 0 $more;
+    @include transform(translateY(11px) rotate(45deg));
+    background-color: $more;
+  }
+  &:hover:after {
+    @include transform(translateY(-11px) rotate(-45deg));
+    background-color: $more;
+  }
+}
+
+.circle {
+  @extend .close;
+  &:hover {
+    padding: 0 2px;
+    box-shadow: 0 0 0 4px $more;
+    border-radius: 100%;
+  }
+}
+
+.arrow {
+  span,
+  span:before,
+  span:after {
+    @include border-radius(3px);
+    height: 4px;
+    width: 34px;
+    @include pseudo;
+    background-color: $more;
+  }
+  span:before,
+  span:after {
+    @include transition(all .3s ease-in-out);
+  }
+  span:before {
+    margin-top: -11px;
+  }
+  span:after {
+    margin-top: 11px;
+  }
+  &:hover span:before {
+    @include transform(translateX(17px) translateY(4px) rotate(45deg));
+    width: 17px;
+  }
+  &:hover span:after {
+    @include transform(translateX(17px) translateY(-4px) rotate(-45deg));
+    width: 17px;
+  }
+}

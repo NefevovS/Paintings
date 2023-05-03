@@ -1,0 +1,108 @@
+body {
+  background-color: #35274A;
+  color: #403432;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display SC", serif;
+}
+
+.text {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0 0 2em;
+  font-size: 24px;
+  text-align: center;
+}
+
+.container {
+  display: none !important;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container .item {
+  max-width: 350px;
+  display: flex;
+  flex: 1 0 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4em 3em;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: flex !important;
+  }
+}
+.icon {
+  padding: 0;
+  margin: 1em;
+  width: 34px;
+}
+
+.close:before, .circle:before, .close:after, .circle:after {
+  border-radius: 3px;
+  height: 4px;
+  margin: 7px 0;
+  transition: all 0.3s ease-in-out;
+  background-color: #403432;
+  content: "";
+  display: block;
+  position: absolute;
+  position: relative;
+}
+.close:before, .circle:before {
+  box-shadow: 0 11px 0 #403432;
+  margin-bottom: 18px;
+}
+.close:hover:before, .circle:hover:before {
+  box-shadow: 0 0 0 #403432;
+  transform: translateY(11px) rotate(45deg);
+  background-color: #403432;
+}
+.close:hover:after, .circle:hover:after {
+  transform: translateY(-11px) rotate(-45deg);
+  background-color: #403432;
+}
+
+.circle:hover {
+  padding: 0 2px;
+  box-shadow: 0 0 0 4px #403432;
+  border-radius: 100%;
+}
+
+.arrow span,
+.arrow span:before,
+.arrow span:after {
+  border-radius: 3px;
+  height: 4px;
+  width: 34px;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #403432;
+}
+.arrow span:before,
+.arrow span:after {
+  transition: all 0.3s ease-in-out;
+}
+.arrow span:before {
+  margin-top: -11px;
+}
+.arrow span:after {
+  margin-top: 11px;
+}
+.arrow:hover span:before {
+  transform: translateX(17px) translateY(4px) rotate(45deg);
+  width: 17px;
+}
+.arrow:hover span:after {
+  transform: translateX(17px) translateY(-4px) rotate(-45deg);
+  width: 17px;
+}
+
+/*# sourceMappingURL=Navicon.module.css.map */
