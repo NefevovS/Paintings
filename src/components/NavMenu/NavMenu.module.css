@@ -10,6 +10,18 @@
   border-right: 2px solid #343030;
 }
 
+.navMenuContainer ul {
+  padding-top: 50px;
+  flex-direction: column;
+  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex !important;
+}
+.navMenuContainer ul li {
+  font-size: 20px;
+}
+
 .active {
   display: block;
 }

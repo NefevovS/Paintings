@@ -1,5 +1,6 @@
 import React from 'react';
 import s from "./NavMenu.module.scss"
+import Navbar from "../Navbar/Navbar";
 
 
 const NavMenu = ({setNavMenuIsVisible,navMenuIsVisible}) => {
@@ -10,24 +11,24 @@ const NavMenu = ({setNavMenuIsVisible,navMenuIsVisible}) => {
             <div className={s.cross} onClick={()=>setNavMenuIsVisible(false)}>
                 &#x2716;
             </div>
-
-            <ul className={s.navlist}>
-                <li>
-                    <a href="#!">Каталог</a>
-                </li>
-                <li>
-                    <a href="#!">Доставка</a>
-                </li>
-                <li>
-                    <a href="#!">Оплата</a>
-                </li>
-                <li>
-                    <a href="#!">Контакты</a>
-                </li>
-                <li>
-                    <a href="#!">О компании</a>
-                </li>
-            </ul>
+          <Navbar/>
+            {/*<ul className={s.navlist}>*/}
+            {/*    <li>*/}
+            {/*        <a href="#!">Каталог</a>*/}
+            {/*    </li>*/}
+            {/*    <li>*/}
+            {/*        <a href="#!">Доставка</a>*/}
+            {/*    </li>*/}
+            {/*    <li>*/}
+            {/*        <a href="#!">Оплата</a>*/}
+            {/*    </li>*/}
+            {/*    <li>*/}
+            {/*        <a href="#!">Контакты</a>*/}
+            {/*    </li>*/}
+            {/*    <li>*/}
+            {/*        <a href="#!">О компании</a>*/}
+            {/*    </li>*/}
+            {/*</ul>*/}
         </div>
     );
 };

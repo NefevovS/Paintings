@@ -8,11 +8,11 @@ const Footer = () => {
       <Navbar />
       <div className={s.contactsWrapper}>
         <div className={s.phoneWrapper}>
-          <img src="./assets/icons/phone.png" alt="phone" />
+          <img src="https://nefevovs.github.io/Paintings/assets/icons/phone.png" alt="phone" />
           <p>+7 (812) 555-55-55</p>
         </div>
         <div className={s.adressWrapper}>
-          <img src="./assets/icons/adress.png" alt="adress" />
+          <img src="https://nefevovs.github.io/Paintings/assets/icons/adress.png" alt="adress" />
           <div>г. Санкт-Петербург, ул. Ефимова, 3</div>
         </div>
       </div>
